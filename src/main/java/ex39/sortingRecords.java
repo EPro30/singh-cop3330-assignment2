@@ -10,10 +10,8 @@ public class sortingRecords {
 
     static Map<String, ArrayList<String>> map = new HashMap<>();
 
-    // Function to sort map by Key
     public static void sortByKey()
     {
-        // TreeMap to store values of HashMap
         TreeMap<String, ArrayList<String>> newMap = new TreeMap<>();
 
         newMap.putAll(map);//copy the data to

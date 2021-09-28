@@ -14,7 +14,7 @@ public class sortingRecords {
     {
         TreeMap<String, ArrayList<String>> newMap = new TreeMap<>();
 
-        newMap.putAll(map);//copy the data to
+        newMap.putAll(map);
 
         //Print the data
         for (Map.Entry<String, ArrayList<String>> entry : newMap.entrySet()) {

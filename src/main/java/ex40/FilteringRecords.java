@@ -4,25 +4,19 @@
  */
 package ex40;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.TreeMap;
+import java.util.*;
 
 
 class sortingRecords {
 
         static Map<String, ArrayList<String>> map = new HashMap<>();
 
-        // Function to sort map by Key
         public static void sortByKey()
         {
-            // TreeMap to store values of HashMap
             TreeMap<String, ArrayList<String>> newMap = new TreeMap<>();
 
-            newMap.putAll(map);//copy the data to
+            newMap.putAll(map);
 
-            //Print the data
             for (Map.Entry<String, ArrayList<String>> entry : newMap.entrySet()) {
                 ArrayList<String> str = entry.getValue();
                 System.out.println(str.get(0) + " " + entry.getKey() + " \t\t\t\t\t\t\t|" + str.get(1) + " \t\t\t\t|" + str.get(2));
@@ -32,6 +26,7 @@ class sortingRecords {
 
         public static void main(String args[])
         {
+            Scanner sc = new Scanner(System.in);
             ArrayList<String> list1 = new ArrayList<>();
             ArrayList<String> list2 = new ArrayList<>();
             ArrayList<String> list3 = new ArrayList<>();
@@ -69,11 +64,13 @@ class sortingRecords {
             map.put("Jacobson", list4);
             map.put("Weber", list5);
 
+            System.out.println("Enter a search String: ");
+            String str1 = sc.next();
+
             System.out.println("Name \t\t\t\t| Postion \t\t\t\t| Separation Date");
             System.out.println("---------------------------------------------------------------------------------------");
             sortByKey();
 
         }
 }
-
 

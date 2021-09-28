@@ -7,7 +7,7 @@ package ex40;
 import java.util.*;
 
 
-class sortingRecords {
+class filteringRecords {
 
         static Map<String, ArrayList<String>> map = new HashMap<>();
 
